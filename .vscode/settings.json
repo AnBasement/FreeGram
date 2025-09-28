@@ -1,0 +1,17 @@
+{
+  "editor.formatOnSave": true,
+  "editor.tabSize": 2,
+  "files.autoSave": "afterDelay",
+  "files.autoSaveDelay": 1000,
+  "python.defaultInterpreterPath": "./freegram-env/bin/python",
+  "python.linting.enabled": true,
+  "python.linting.flake8Enabled": true,
+  "[python]": {
+    "editor.defaultFormatter": "ms-python.black-formatter",
+    "editor.formatOnSave": true
+  },
+  "git.enableSmartCommit": true,
+  "git.autofetch": true,
+  "terminal.integrated.defaultProfile.windows": "Ubuntu (WSL)",
+  "terminal.integrated.defaultProfile.osx": "zsh"
+}

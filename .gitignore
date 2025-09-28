@@ -1,0 +1,5 @@
+# Node.js dependencies
+node_modules/
+
+# Local environment files (not for version control)
+freegram-env/
