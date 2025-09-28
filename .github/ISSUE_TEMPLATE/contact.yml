@@ -1,0 +1,29 @@
+name: Contact
+description: Use this form to let me know why you're getting in touch
+title: "[Contact]"
+labels: contact
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for reaching out! Please fill in the fields below so I can get a better understanding of the purpose of your message.
+
+  - type: input
+    id: reason
+    attributes:
+      label: Reason for contacting
+      description: Choose one or briefly explain your reason
+      placeholder: Feedback, Question, Bug report, Suggestion, Other
+    validations:
+      required: true
+
+  - type: textarea
+    id: details
+    attributes:
+      label: Additional details
+      description: Provide any additional information that will help me understand your request
+      placeholder: Add context, links, screenshots, etc.
+
+  - type: markdown
+    attributes:
+      value: "I appreciate your message and will review it as soon as possible."
