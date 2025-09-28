@@ -59,8 +59,8 @@
 }
 
 .menu a {
-    color: #2d2d2d;
-    text-decoration: none;
+    color: #174ea6;
+    text-decoration: underline;
     padding: 0.5em 0.8em;
     border-radius: 0.3em;
     transition: background 0.2s, color 0.2s;
@@ -68,7 +68,7 @@
 
 .menu a:hover, .menu a:focus {
     background: #e0e7ef;
-    color: #174ea6;
+    color: #2d2d2d;
 }
 
 @media (min-width: 600px) {
