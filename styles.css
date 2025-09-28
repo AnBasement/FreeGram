@@ -3,24 +3,79 @@
     font-family:'Courier New', Courier, monospace
 }
 
-nav {
+.menu {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
     border-bottom: solid black 2px;
     padding-bottom: 10px;
+    list-style: none;
 }
 
-.menu {
-    display: inline-block
+.hero {
+    display: grid;
+    place-items: center;
+    min-height: 20vh;
+    background: linear-gradient(135deg, #f8fafc 80%, #e0e7ef 100%);
+    margin-bottom: 1.2rem;
+    padding: 1.2rem 0.5rem 0.5rem 0.5rem;
 }
 
-.menu ol {
-    list-style-type: none;
-    padding-left: 0;
-    overflow: hidden;
-    background-color: #e8e8e8;
+.hero-content {
+    max-width: 420px;
+    display: grid;
+    gap: 0.7rem;
+    background: rgba(255,255,255,0.7);
+    border-radius: 0.7rem;
+    box-shadow: 0 1px 6px rgba(0,0,0,0.03);
+    padding: 1.1rem 0.7rem;
+}
+
+.hero h1 {
+    font-size: 1.3rem;
+    margin-bottom: 0.3rem;
+}
+
+.hero p {
+    font-size: 0.98rem;
+    color: #444;
+}
+
+.cta {
+    background: #2d72d9;
+    color: #fff;
+    border: none;
+    border-radius: 0.4rem;
+    padding: 0.5em 1.2em;
+    font-size: 0.95rem;
+    cursor: pointer;
+    transition: background 0.3s, transform 0.2s;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+}
+
+.cta:hover, .cta:focus {
+    background: #174ea6;
+    transform: translateY(-2px) scale(1.04);
 }
 
 .menu a {
-    text-align: center;
-    padding: 14px 16px;
+    color: #2d2d2d;
     text-decoration: none;
+    padding: 0.5em 0.8em;
+    border-radius: 0.3em;
+    transition: background 0.2s, color 0.2s;
+}
+
+.menu a:hover, .menu a:focus {
+    background: #e0e7ef;
+    color: #174ea6;
+}
+
+@media (min-width: 600px) {
+    .hero h1 {
+        font-size: 1.7rem;
+    }
+    .hero-content {
+        padding: 1.5rem 1.2rem;
+    }
 }
