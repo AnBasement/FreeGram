@@ -17,7 +17,7 @@ nav {
     gap: 6px;
 }
 
-.menu i, .logo i {
+i {
   height: 1.5rem;
   width: 1.5rem;
 }
@@ -28,20 +28,9 @@ nav {
   gap: 6px;
   color: black;
   text-decoration: none;
-}
-
-.menu a:hover {
-  color: darkgray; /* optional hover effect */
-}
-
-.nav-icons {
-    height: 1.5rem;
-    margin-right: 10px;
-}
-
-.logo-icon {
-    height: 1.5rem;
-    margin-right: 10px;
+  padding: 0.5em 0.8em;
+  border-radius: 0.3em;
+  transition: background 0.2s, color 0.2s;
 }
 
 .menu {
@@ -50,6 +39,26 @@ nav {
     margin: 0;
     padding: 0;
     list-style: none;
+}
+
+.menu a:hover, .menu a:focus {
+    background: #e0e7ef;
+    color: #2d2d2d;
+}
+
+.breadcrumb {
+    list-style: none;
+    display: flex;
+    gap: 5px;
+    padding: 10px 0;
+    font-size: 0.9rem;
+}
+
+ul.breadcrumb li+li:before {
+  padding-left: 5px;
+  padding-right: 0;
+  color: black;
+  content: "/\00a0";
 }
 
 .hero {
@@ -98,17 +107,30 @@ nav {
     transform: translateY(-2px) scale(1.04);
 }
 
-.menu a {
-    color: black;
-    text-decoration: none;
-    padding: 0.5em 0.8em;
-    border-radius: 0.3em;
-    transition: background 0.2s, color 0.2s;
+.planned-language {
+    max-width: 600px;
+    margin: 0 auto 2rem auto;
+    padding: 1.5rem;
+    background: #f9f9f9;
+    border-radius: 0.5rem;
+    border: 1px solid #e0e0e0;
 }
 
-.menu a:hover, .menu a:focus {
-    background: #e0e7ef;
-    color: #2d2d2d;
+.planned-language h2 {
+    margin-bottom: 0.8rem;
+    font-size: 1.4rem;
+}
+
+.planned-language ul {
+    margin: 0;
+    padding-left: 1.2rem;
+}
+
+.planned-language li {
+    margin-bottom: 0.5rem;
+    list-style: none;
+    position: relative;
+    padding-left: 1rem;
 }
 
 @media (min-width: 600px) {

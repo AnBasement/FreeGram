@@ -32,21 +32,46 @@
                 </li>
             </ul>
         </nav>
-        <section class="hero">
-            <div class="hero-content">
-                <h1>Planned Curriculum</h1>
-                <p>Here's an excerpt of what courses FreeGram will be offering. This is a work in progress and may change over time.</p>
-            </div>
+        <ul class ="breadcrumb">
+            <li><a href="/index.html">Home</a></li>
+            <li>Plans</li>
+        </ul>
+        <section class="course-overview">
+            <h1>Planned Curriculum</h1>
+            <p>Various courses will be offered through FreeGram, with the goal of at one point being able to provide certifications. The initial plans are to provide courses in <a href="#Python">Python</a>, <a href="#HTML">HTML</a> and <a href="#CSS">CSS</a>, as those are the main languages I'm working with while creating FreeGram, with JavaScript probably being next after that. Below you will find more details on what exactly is planned for each language. Keep in mind that everything you read here is subject to change.</p>
         </section>
         <main>
-          <h2>Python</h2>
-          <p>FreeGram will offer a handful of Python courses aimed at helping beginners get their foot in the door in programming. Python will also be the first language covered. Some of the classes will include:</p>
-          <ul>
-            <li>Introduction to Python: Basics, syntax, and simple programs.</li>
-            <li>Data Structures in Python: Lists, dictionaries, sets, and tuples.</li>
-            <li>Object-Oriented Programming: Classes, objects, inheritance, and polymorphism.</li>
-            <li>Web Development with Flask: Building simple web applications.</li>
-            <li>Data Analysis with Pandas: Handling and analyzing data sets.</li>
+            <div class="planned-language">
+                <h2 id="Python">Python</h2>
+                    <p>FreeGram will offer a handful of Python courses aimed at helping beginners get their foot in the door in programming. Python will also be the first language covered. Planned beginner courses include:</p>
+                    <ul>
+                        <li><strong>Python Basics:</strong> Learn about variables, data types, and simple input/output.</li>
+                        <li><strong>Control Flow:</strong> Introduction to if-statements, loops, and basic logic.</li>
+                        <li><strong>Functions:</strong> How to write and use functions in Python.</li>
+                        <li><strong>Working with Lists:</strong> Storing and processing collections of data.</li>
+                    </ul>
+            </div>
+            <div class="planned-language">
+                <h2 id="HTML">HTML</h2>
+                    <p>It's useful to know at least the basics of HTML markup, which is the foundation of all web pages. Planned beginner courses include:</p>
+                    <ul>
+                        <li><strong>HTML Fundamentals:</strong> Structure a web page with headings, paragraphs, and lists.</li>
+                        <li><strong>Links and Images:</strong> Add navigation and visuals to your pages.</li>
+                        <li><strong>Forms (Intro):</strong> Basic user input with forms and simple controls.</li>
+                    </ul>
+            </div>
+            <div class="planned-language">
+                <h2 id="CSS">CSS</h2>
+                    <p>CSS is what (can) make web pages look good, and it's something I've struggled with myself. Planned beginner courses include:</p>
+                    <ul>
+                        <li><strong>CSS Basics:</strong> Selectors, properties, and how to style text and backgrounds.</li>
+                        <li><strong>Box Model & Layout:</strong> Margins, padding, borders, and simple layouts.</li>
+                        <li><strong>Colors & Fonts:</strong> Make your site visually appealing with color and typography.</li>
+                    </ul>
+            </div>
         </main>
+        <script>
+            lucide.createIcons();
+        </script>
       </body>
   </html>
