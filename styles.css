@@ -3,12 +3,29 @@
     font-family:'Courier New', Courier, monospace
 }
 
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: solid black 2px;
+    padding-bottom: 10px
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+}
+
+.logo-icon {
+    height: 1.5rem;
+    margin-right: 10px;
+}
+
 .menu {
     display: flex;
-    justify-content: center;
-    gap: 10px;
-    border-bottom: solid black 2px;
-    padding-bottom: 10px;
+    gap: 15px;
+    margin: 0;
+    padding: 0;
     list-style: none;
 }
 
