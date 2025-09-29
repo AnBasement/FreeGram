@@ -3,6 +3,12 @@
     font-family:'Courier New', Courier, monospace
 }
 
+body {
+    max-width: 720px;
+    margin: 0 auto;
+    padding: 0 1rem;
+}
+
 nav {
     display: flex;
     justify-content: space-between;
@@ -105,6 +111,11 @@ ul.breadcrumb li+li:before {
 .cta:hover, .cta:focus {
     background: #174ea6;
     transform: translateY(-2px) scale(1.04);
+}
+
+.clicked-plans {
+    background: #8ea5e4 !important;
+    transform: none !important;
 }
 
 .planned-language {
