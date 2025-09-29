@@ -3,3 +3,6 @@ node_modules/
 
 # Local environment files (not for version control)
 freegram-env/
+
+# Various docs for personal use
+temporary_docs/
