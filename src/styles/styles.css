@@ -1,6 +1,6 @@
 * {
     text-align: center;
-    font-family:'Courier New', Courier, monospace
+    font-family:'Segoe UI', Courier, monospace
 }
 
 body {
@@ -20,7 +20,18 @@ nav {
 .logo {
     display: flex;
     align-items: center;
+    justify-content: space-between;
     gap: 6px;
+}
+
+.in-development {
+    background-color: rgb(233, 233, 233);
+    border-radius: 5px;
+    padding-left: 0.5rem;
+    padding-right: 0.5rem;
+    padding-bottom: 0.1rem;
+    font-size: 12px;
+    margin-top: 0.2rem;
 }
 
 i {
