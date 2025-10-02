@@ -13,7 +13,7 @@ nav {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    border-bottom: solid black 2px;
+    border-bottom: solid rgb(180, 180, 180) 1px;
     padding-bottom: 10px
 }
 
@@ -50,16 +50,21 @@ i {
   transition: background 0.2s, color 0.2s;
 }
 
+#menu-text {
+    padding-bottom: 0.2rem;
+}
+
 .menu {
     display: flex;
+    justify-items: center;
     gap: 15px;
     margin: 0;
-    padding: 0;
+    padding-top: .2rem;
     list-style: none;
 }
 
 .menu a:hover, .menu a:focus {
-    background: #e0e7ef;
+    background: #ececec;
     color: #2d2d2d;
 }
 
@@ -81,15 +86,6 @@ ul.breadcrumb li+li:before {
 .hero {
     display: grid;
     place-items: center;
-    min-height: 20vh;
-    background: linear-gradient(135deg, #f8fafc 80%, #e0e7ef 100%);
-    margin-bottom: 1.2rem;
-    padding: 1.2rem 0.5rem 0.5rem 0.5rem;
-}
-
-.hero-content {
-    max-width: 420px;
-    display: grid;
     gap: 0.7rem;
     background: rgba(255,255,255,0.7);
     border-radius: 0.7rem;
@@ -107,26 +103,40 @@ ul.breadcrumb li+li:before {
     color: #444;
 }
 
-.cta {
-    background: #2d72d9;
-    color: #fff;
-    border: none;
+.cta-button {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    background: #ffffff;
+    color: #000000;
+    border: 1px solid lightgray;
     border-radius: 0.4rem;
     padding: 0.5em 1.2em;
     font-size: 0.95rem;
     cursor: pointer;
-    transition: background 0.3s, transform 0.2s;
+    transition: background 0.3s;
     box-shadow: 0 1px 3px rgba(0,0,0,0.05);
 }
 
-.cta:hover, .cta:focus {
-    background: #174ea6;
-    transform: translateY(-2px) scale(1.04);
+.cta-button:hover, .cta-button:focus {
+    background: #f3f3f3;
 }
 
-.clicked-plans {
-    background: #8ea5e4 !important;
-    transform: none !important;
+.cta-buttons {
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+}
+
+.plans, .repo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 6px;
+}
+
+.clicked-button {
+    background: #d4d4d4 !important;
 }
 
 .planned-language {
