@@ -70,6 +70,7 @@ i {
 
 .programming-quotes {
     background: #f1f1f1be;
+    overflow: hidden;
 }
 
 #quote-text {
@@ -77,6 +78,7 @@ i {
     font-size: 0.9rem;
     margin: 0;
     padding: 0.8rem 1rem 0 1rem;
+    transition: transform 0.6s ease-in-out, opacity 0.6s ease-in-out;
 }
 
 #quote-author {
@@ -84,6 +86,22 @@ i {
     margin: 0;
     padding: 0 1rem 0.8rem 1rem;
     color: #555;
+    transition: transform 0.6s ease-in-out, opacity 0.6s ease-in-out;
+}
+
+.quote-exit {
+    transform: translateX(-100%);
+    opacity: 0;
+}
+
+.quote-enter {
+    transform: translateX(100%);
+    opacity: 0;
+}
+
+.quote-visible {
+    transform: translateX(0);
+    opacity: 1;
 }
 
 .breadcrumb {
