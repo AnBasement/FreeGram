@@ -71,31 +71,33 @@ function rotatingQuote() {
   const quoteTextEl = document.getElementById("quote-text");
   const quoteAuthorEl = document.getElementById("quote-author");
 
-  // Remove visible state and slide out to left
-  quoteTextEl.classList.remove("quote-visible");
-  quoteAuthorEl.classList.remove("quote-visible");
+  // Clear any existing animation classes
+  quoteTextEl.className = '';
+  quoteAuthorEl.className = '';
+  
+  // Start exit animation
   quoteTextEl.classList.add("quote-exit");
   quoteAuthorEl.classList.add("quote-exit");
 
-  // After exit animation, update content and slide in from right
+  // After exit animation completes, update content and start enter animation
   setTimeout(() => {
     quoteTextEl.textContent = `"${q.text}"`;
     quoteAuthorEl.textContent = `- ${q.author}`;
 
-    // Remove exit classes, set up entry from right
-    quoteTextEl.classList.remove("quote-exit");
-    quoteAuthorEl.classList.remove("quote-exit");
+    // Clear classes and start enter animation
+    quoteTextEl.className = '';
+    quoteAuthorEl.className = '';
     quoteTextEl.classList.add("quote-enter");
     quoteAuthorEl.classList.add("quote-enter");
 
-    // Small delay before sliding to visible
+    // After enter animation completes, set to visible state
     setTimeout(() => {
-      quoteTextEl.classList.remove("quote-enter");
-      quoteAuthorEl.classList.remove("quote-enter");
+      quoteTextEl.className = '';
+      quoteAuthorEl.className = '';
       quoteTextEl.classList.add("quote-visible");
       quoteAuthorEl.classList.add("quote-visible");
-    }, 50);
-  }, 600);
+    }, 800);
+  }, 800);
 }
 
 // Initialize quotes on page load
