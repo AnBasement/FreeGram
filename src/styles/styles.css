@@ -74,16 +74,20 @@ i {
     position: relative;
 }
 
-#quote-text {
-    font-style: italic;
-    font-size: 0.9rem;
+/* Quote elements base styles */
+#quote-text, #quote-author {
     margin: 0;
-    padding: 0.8rem 1rem 0 1rem;
-    transition: transform 0.6s ease-in-out, opacity 0.6s ease-in-out;
     display: block;
     position: relative;
     width: 100%;
     box-sizing: border-box;
+}
+
+#quote-text {
+    font-style: italic;
+    font-size: 0.9rem;
+    padding: 0.8rem 1rem 0 1rem;
+    /* Reset blockquote defaults */
     border: none;
     quotes: none;
     background: transparent;
@@ -91,14 +95,9 @@ i {
 
 #quote-author {
     font-size: 0.7rem;
-    margin: 0;
     padding: 0 1rem 0.8rem 1rem;
     color: #555;
-    transition: transform 0.6s ease-in-out, opacity 0.6s ease-in-out;
-    display: block;
-    position: relative;
-    width: 100%;
-    box-sizing: border-box;
+    /* Reset cite defaults */
     font-style: normal;
 }
 

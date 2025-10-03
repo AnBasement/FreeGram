@@ -60,58 +60,56 @@ const quotes = [
   }
 ];
 
-// Pull a random quote from the array
+// Quote functionality
+const ANIMATION_DURATION = 800; // Animation duration in milliseconds
+
 function randomQuote() {
   return quotes[Math.floor(Math.random() * quotes.length)];
 }
 
-// Update the quote on the page
-function rotatingQuote() {
-  const q = randomQuote();
-  const quoteTextEl = document.getElementById("quote-text");
-  const quoteAuthorEl = document.getElementById("quote-author");
-
-  // Clear any existing animation classes
-  quoteTextEl.className = '';
-  quoteAuthorEl.className = '';
-  
-  // Start exit animation
-  quoteTextEl.classList.add("quote-exit");
-  quoteAuthorEl.classList.add("quote-exit");
-
-  // After exit animation completes, update content and start enter animation
-  setTimeout(() => {
-    quoteTextEl.textContent = `"${q.text}"`;
-    quoteAuthorEl.textContent = `- ${q.author}`;
-
-    // Clear classes and start enter animation
-    quoteTextEl.className = '';
-    quoteAuthorEl.className = '';
-    quoteTextEl.classList.add("quote-enter");
-    quoteAuthorEl.classList.add("quote-enter");
-
-    // After enter animation completes, set to visible state
-    setTimeout(() => {
-      quoteTextEl.className = '';
-      quoteAuthorEl.className = '';
-      quoteTextEl.classList.add("quote-visible");
-      quoteAuthorEl.classList.add("quote-visible");
-    }, 800);
-  }, 800);
+function setQuoteAnimation(elements, animationClass) {
+  elements.forEach(el => {
+    el.className = '';
+    el.classList.add(animationClass);
+  });
 }
 
-// Initialize quotes on page load
+function rotatingQuote() {
+  const quote = randomQuote();
+  const quoteElements = [
+    document.getElementById("quote-text"),
+    document.getElementById("quote-author")
+  ];
+
+  // Start exit animation
+  setQuoteAnimation(quoteElements, "quote-exit");
+
+  // After exit completes, update content and enter
+  setTimeout(() => {
+    quoteElements[0].textContent = `"${quote.text}"`;
+    quoteElements[1].textContent = `- ${quote.author}`;
+
+    // Start enter animation
+    setQuoteAnimation(quoteElements, "quote-enter");
+
+    // After enter completes, set to visible state
+    setTimeout(() => {
+      setQuoteAnimation(quoteElements, "quote-visible");
+    }, ANIMATION_DURATION);
+  }, ANIMATION_DURATION);
+}
+
+// Initialize quotes when page loads
 document.addEventListener('DOMContentLoaded', function() {
-  const quoteTextEl = document.getElementById("quote-text");
-  const quoteAuthorEl = document.getElementById("quote-author");
+  const quoteElements = [
+    document.getElementById("quote-text"),
+    document.getElementById("quote-author")
+  ];
   
   // Set initial visible state
-  quoteTextEl.classList.add("quote-visible");
-  quoteAuthorEl.classList.add("quote-visible");
+  setQuoteAnimation(quoteElements, "quote-visible");
   
-  // Show first quote immediately
+  // Start quote rotation
   rotatingQuote();
-  
-  // Rotate quotes every 8 seconds
   setInterval(rotatingQuote, 8000);
 });
